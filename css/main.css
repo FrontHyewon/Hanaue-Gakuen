@@ -1,0 +1,160 @@
+@keyframes totop {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+body {
+  width: 1920px;
+  overflow-x: hidden;
+  height: auto;
+  font-family: "Noto Serif KR", "Rajdhani", serif;
+  color: white;
+  background-color: #831919;
+}
+.rap {
+  margin: 0 auto;
+  width: 80%;
+  height: auto;
+}
+#wrapper {
+  height: auto;
+  min-height: 100%;
+  background-size: 100% 100%;
+}
+.header-top {
+  width: 100%;
+  height: 560px;
+  background: linear-gradient(#333333, #831919);
+  position: relative;
+}
+.header-top h1 {
+  width: 491px;
+  height: 112px;
+  position: absolute;
+  top: 240px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 10;
+}
+.header-top h1 a:hover {
+  cursor: pointer;
+}
+.header-top .header-img {
+  width: 1920px;
+  position: absolute;
+  top: 74px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.header-img img {
+  animation: totop 1s linear 1 normal;
+}
+nav {
+  width: 100%;
+  height: 80px;
+  background-color: #831919;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  font-family: "Rajdhani", serif;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 30;
+}
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+nav ul li {
+  margin-right: 40px;
+  font-size: 20px;
+  line-height: 80px;
+}
+nav ul li a {
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+  position: relative;
+  transition: all 0.2s;
+}
+nav ul li a:hover {
+  opacity: 0.6;
+}
+nav ul li a:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #000;
+  transform: scale(0);
+  transition: all 0.2s;
+}
+
+nav ul li a:hover:before {
+  background: #fff;
+  transform: scale(1);
+}
+
+footer {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  transform: translateY();
+  background-color: #222;
+  font-family: sans-serif;
+}
+footer .rap {
+  padding-top: 100px;
+  text-align: center;
+  font-size: 15px;
+  color: #393939;
+}
+footer a {
+  text-decoration: none;
+  color: #831919;
+  transition: all 0.5s;
+}
+footer a:hover {
+  color: #393939;
+}
+footer p {
+  margin-top: 20px;
+}
+
+#to-top {
+  width: 42px;
+  height: 42px;
+  background-color: #111;
+  color: #fff;
+  border: 5px double #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 11;
+}
+
+.notice {
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px;
+  text-align: center;
+  color: aliceblue;
+  font-size: 14px;
+  font-weight: 100;
+  opacity: 0.5;
+}
